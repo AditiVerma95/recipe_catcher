@@ -11,7 +11,6 @@ public class BasketMovement : MonoBehaviour
 
     // Update is called once per frame
     private void Update() {
-        Debug.Log(PlayerInput.Instance.mousePos);
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(PlayerInput.Instance.mousePos);
         basket.transform.position = new Vector3(Mathf.Clamp(worldPos.x, -7.6f, 2.67f), basket.transform.position.y, 0f);
     }
